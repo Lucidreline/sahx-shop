@@ -2,3 +2,8 @@ body {
   font-family: 'Caladea', serif;
   letter-spacing: 2px;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
