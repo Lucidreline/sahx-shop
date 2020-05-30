@@ -1,0 +1,24 @@
+.collection-item {
+  width: 28rem;
+  height: 38rem;
+  margin: 1rem 0.5rem;
+
+  .collection-item-photo {
+    height: 95%;
+    background-position: center;
+    background-size: cover;
+    transition: 0.25s;
+
+    &:hover {
+      box-shadow: rgba($color: #000000, $alpha: 0.4) -3px 0px 9px;
+    }
+  }
+
+  .collection-item-info {
+    height: 5%;
+    font-size: 1.6rem;
+    padding: 0.2rem 0rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}

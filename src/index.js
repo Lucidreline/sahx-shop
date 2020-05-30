@@ -8,7 +8,9 @@ import App from './App';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <div className='container'>
+        <App />
+      </div>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

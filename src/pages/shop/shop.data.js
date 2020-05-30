@@ -112,11 +112,6 @@ const SHOP_DATA = [
         price: 20,
       },
       {
-        name: 'Warm Hug',
-        imageUrl: '',
-        price: 0,
-      },
-      {
         name: 'Feet Mittens',
         imageUrl:
           'https://res.cloudinary.com/dglxjd018/image/upload/v1590812441/Sahx%20Shop/Products/fluffy/fluffy_7_pwg4hx.jpg',

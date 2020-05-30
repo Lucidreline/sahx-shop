@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './collection-item.component';
+import './collection-item.styles.scss';
 
 const CollectionItem = ({ imageUrl, name, price }) => (
   <div className='collection-item'>
@@ -10,7 +10,7 @@ const CollectionItem = ({ imageUrl, name, price }) => (
     ></div>
     <div className='collection-item-info'>
       <span>{name}</span>
-      <span>{price}</span>
+      <span>${price}</span>
     </div>
   </div>
 );
