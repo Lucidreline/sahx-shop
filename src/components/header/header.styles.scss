@@ -19,9 +19,16 @@
   width: 50%;
   display: flex;
   justify-content: flex-end;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 
   .link {
-    margin: auto 2rem;
+    margin-left: 2rem;
+    color: #333;
+    transition: 0.25s;
+
+    &:hover {
+      color: black;
+      text-shadow: black -0.3px 0.3px;
+    }
   }
 }
