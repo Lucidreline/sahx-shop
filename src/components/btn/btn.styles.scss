@@ -1,0 +1,41 @@
+@mixin color($color-hex) {
+  border-color: $color-hex;
+  color: $color-hex;
+
+  &:hover {
+    background-color: $color-hex;
+    color: white;
+  }
+}
+
+.btn {
+  color: black;
+  padding: 0.9rem 2.9rem;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  transition: 0.275s;
+
+  background: none;
+  border: black 2px solid;
+
+  &:hover {
+    background: black;
+    color: white;
+  }
+
+  &.blue {
+    @include color(#0fbcf9);
+  }
+
+  &.green {
+    @include color(#05c46b);
+  }
+
+  &.red {
+    @include color(#ff3f34);
+  }
+
+  &.orange {
+    @include color(#ffa801);
+  }
+}

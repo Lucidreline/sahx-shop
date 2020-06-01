@@ -26,8 +26,16 @@ $height: 3rem;
     width: 95%;
     margin: 0 auto;
 
-    &:focus {
+    &:focus,
+    input:focus {
       outline: none;
+    }
+
+    &:required {
+      box-shadow: none;
+    }
+    &:invalid {
+      box-shadow: none;
     }
 
     &:focus ~ .form-input-label {
