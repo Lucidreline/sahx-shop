@@ -1,0 +1,52 @@
+$raise-color: black;
+$reg-color: #333;
+$height: 3rem;
+
+@mixin raiseLabel {
+  left: 0;
+  top: ($height * -1) + 1rem;
+  font-size: 1.35rem;
+  color: $raise-color;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  margin: ($height + 1.8rem) 0;
+
+  height: $height;
+
+  .form-input {
+    background: none;
+    height: 100%;
+    width: 100%;
+    color: $reg-color;
+    border: none;
+    border-bottom: 2px solid #333;
+    width: 95%;
+    margin: 0 auto;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .form-input-label {
+      @include raiseLabel();
+    }
+  }
+
+  .form-input-label {
+    font-size: 1.6rem;
+    font-weight: normal;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.25s ease all;
+    pointer-events: none;
+
+    &.raise {
+      @include raiseLabel();
+    }
+  }
+}
