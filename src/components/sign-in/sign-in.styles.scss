@@ -1,4 +1,7 @@
 .sign-in {
+  margin-top: 5rem;
+  max-width: 50rem;
+
   .title {
     text-transform: uppercase;
     font-weight: normal;
@@ -10,5 +13,10 @@
     color: #333;
     margin-bottom: 4.75rem;
     display: block;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
   }
 }

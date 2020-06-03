@@ -48,10 +48,12 @@ class SignIn extends React.Component {
             handleChange={this.handleChange}
             label='Password'
           />
-          <Btn type='submit'>Sign In</Btn>
-          <Btn color='blue' onClick={signInWithGoogle}>
-            Sign In With Google
-          </Btn>
+          <div className='buttons'>
+            <Btn type='submit'>Sign In</Btn>
+            <Btn color='blue' onClick={signInWithGoogle}>
+              Sign in with Google
+            </Btn>
+          </div>
         </form>
       </div>
     );
