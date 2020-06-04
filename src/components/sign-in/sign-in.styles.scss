@@ -1,4 +1,5 @@
-.sign-in {
+.sign-in,
+.sign-up {
   margin-top: 5rem;
   max-width: 50rem;
 
@@ -15,7 +16,7 @@
     display: block;
   }
 
-  .buttons {
+  .btns {
     display: flex;
     justify-content: space-between;
   }

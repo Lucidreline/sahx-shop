@@ -29,15 +29,12 @@ class App extends React.Component {
         const userRef = await saveUserToDB(currentUser);
 
         userRef.onSnapshot(snapShot => {
-          this.setState(
-            {
-              currentUser: {
-                id: snapShot.id, // basicly adds the current user's data to the state along with the id
-                ...snapShot.data(),
-              },
+          this.setState({
+            currentUser: {
+              id: snapShot.id, // basicly adds the current user's data to the state along with the id
+              ...snapShot.data(),
             },
-            () => console.log(this.state)
-          );
+          });
         });
       } else {
         this.setState({ currentUser }); // tells the state that the current user is null (if they sign out)
