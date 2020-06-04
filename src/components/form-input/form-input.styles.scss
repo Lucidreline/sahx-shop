@@ -20,11 +20,13 @@ $height: 3rem;
     background: none;
     height: 100%;
     width: 100%;
-    color: $reg-color;
+    color: $raise-color;
+    font-size: 1.7rem;
     border: none;
     border-bottom: 2px solid #333;
     width: 100%;
     margin: 0 auto;
+    padding: 0 1rem;
 
     &:focus,
     input:focus {

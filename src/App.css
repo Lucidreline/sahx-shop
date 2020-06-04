@@ -1,4 +1,5 @@
-body {
+body,
+input {
   font-family: 'Caladea', serif;
   letter-spacing: 2px;
 }
