@@ -1,5 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { setCurrentUser } from './redux/user/user.actions';
 
 import { auth, saveUserToDB } from './firebase/firebase.utils';
 
@@ -23,21 +26,21 @@ class App extends React.Component {
   stopListeningForAuth = null;
 
   componentDidMount() {
+    const { setCurrentUser } = this.props;
+
     this.stopListeningForAuth = auth.onAuthStateChanged(async currentUser => {
       if (currentUser) {
         // this happens when someone signs in/out as long as this is mounted
         const userRef = await saveUserToDB(currentUser);
 
         userRef.onSnapshot(snapShot => {
-          this.setState({
-            currentUser: {
-              id: snapShot.id, // basicly adds the current user's data to the state along with the id
-              ...snapShot.data(),
-            },
+          setCurrentUser({
+            id: snapShot.id, // basicly adds the current user's data to the state along with the id
+            ...snapShot.data(),
           });
         });
       } else {
-        this.setState({ currentUser }); // tells the state that the current user is null (if they sign out)
+        setCurrentUser(currentUser); // tells the state that the current user is null (if they sign out)
       }
     });
   }
@@ -49,7 +52,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header currentUser={this.state.currentUser} />
+        <Header />
         <div className='container'>
           <Switch>
             <Route exact path='/' component={HomePage} />
@@ -62,4 +65,8 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user)),
+});
+
+export default connect(null, mapDispatchToProps)(App);
