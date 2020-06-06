@@ -7,10 +7,11 @@
 }
 
 .header {
-  height: 6.5vh;
+  height: 7.5vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 100%;
   width: 90%;
 }
 
@@ -27,6 +28,7 @@
   width: 80%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   font-size: 1.6rem;
 
   .link {

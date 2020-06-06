@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 
 import { auth } from '../../firebase/firebase.utils.js';
 
+import CartIcon from '../cart-icon/cart-icon.component';
+
 import './header.styles.scss';
 
 const Header = ({ currentUser }) => (
@@ -32,6 +34,7 @@ const Header = ({ currentUser }) => (
         <Link className='link' to='/'>
           contact
         </Link>
+        <CartIcon />
       </div>
     </div>
   </div>
