@@ -8,7 +8,7 @@ const Btn = ({ color, filled, children, ...otherProps }) => {
   else filled = 'not-filled';
   return (
     <div className='btn-container'>
-      <button className={`${color}  ${filled} btn`} {...otherProps}>
+      <button className={` ${color} ${filled} btn`} {...otherProps}>
         {children}
       </button>
     </div>

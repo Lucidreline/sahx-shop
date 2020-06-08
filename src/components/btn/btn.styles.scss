@@ -5,12 +5,25 @@
   &:hover {
     background-color: $color-hex;
     color: white;
+    scale: 1.025;
+  }
+}
+
+@mixin filled($color-hex) {
+  &.filled {
+    background-color: $color-hex;
+    color: white;
+
+    &:hover {
+      scale: 1.025;
+      box-shadow: rgba(0, 0, 0, 0.5) -2px 2px 5px;
+    }
   }
 }
 
 .btn {
   color: black;
-  padding: 1.4rem 3rem;
+  padding: 1rem 2.1rem;
   border-radius: 5px;
   font-size: 1.6rem;
   transition: 0.275s;
@@ -19,13 +32,12 @@
   background: none;
   border: black 2px solid;
 
-  &:hover {
-    background: black;
-    color: white;
-  }
+  @include color(black);
+  @include filled(black);
 
   &.blue {
     @include color(#0fbcf9);
+    @include filled(#0fbcf9);
   }
 
   &.green {

@@ -32,9 +32,6 @@ const Header = ({ currentUser, hidden }) => (
           </Link>
         )}
 
-        <Link className='link' to='/'>
-          contact
-        </Link>
         <CartIcon />
       </div>
       {hidden ? null : <CartDropdown />}
