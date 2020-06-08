@@ -2,6 +2,7 @@
   width: 28rem;
   height: 38rem;
   margin: 1rem 0.5rem;
+  position: relative;
 
   .collection-item-photo {
     height: 95%;
@@ -20,5 +21,24 @@
     padding: 0.2rem 0rem;
     display: flex;
     justify-content: space-between;
+  }
+
+  &:hover {
+    .collection-item-photo {
+      opacity: 0.7;
+    }
+    button {
+      display: inline;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5rem;
+    width: 20rem;
+    display: none;
   }
 }

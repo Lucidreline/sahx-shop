@@ -13,7 +13,7 @@ const CollectionItem = ({ imageUrl, name, price }) => (
       <span>{name}</span>
       <span>${price}</span>
     </div>
-    <Btn>Add To Cart</Btn>
+    <Btn filled>Add To Cart</Btn>
   </div>
 );
 
