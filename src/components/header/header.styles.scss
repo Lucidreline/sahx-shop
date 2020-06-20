@@ -7,13 +7,11 @@
 }
 
 .header {
-  height: 7.5vh;
+  height: 6.5vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  line-height: 100%;
   width: 90%;
-  position: relative;
 }
 
 .logo-container {
@@ -29,7 +27,6 @@
   width: 80%;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   font-size: 1.6rem;
 
   .link {
