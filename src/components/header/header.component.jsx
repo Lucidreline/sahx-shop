@@ -28,10 +28,6 @@ const Header = ({ currentUser }) => (
             Sign In
           </Link>
         )}
-
-        <Link className='link' to='/'>
-          contact
-        </Link>
       </div>
     </div>
   </div>
